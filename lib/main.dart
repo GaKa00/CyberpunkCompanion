@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math'; // Required for the Random class
 
 void main() {
   runApp(const MyApp());
@@ -44,9 +43,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-}
-
-int getDiceValue(int diceSize) {
-  final rnd = Random();
-  return rnd.nextInt(diceSize) + 1;
 }
