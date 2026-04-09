@@ -1,3 +1,4 @@
+import 'package:cptcgc/widgets/navlink.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,14 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
       routes: {
-        '/': (context) => const MyApp(),
-        '/dice': (context) => const DiceScreen(),
-        '/deck': (context) => const DeckBuilder(),
-        '/rules': (context) => const RulesScreen(),
-        '/cards': (context) => const CardDatabase(),
-        '/ai': (context) => const AICompanion(),
+        // '/dice': (context) => const DiceScreen(),
+        // '/deck': (context) => const DeckBuilder(),
+        // '/rules': (context) => const RulesScreen(),
+        // '/cards': (context) => const CardDatabase(),
+        // '/ai': (context) => const AICompanion(),
       },
       debugShowCheckedModeBanner: false,
       title: 'Cyberpunk TCG',
@@ -35,9 +34,15 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: const Center(
-          child: Text(
-            'System Online: Hello, World!',
-            style: TextStyle(color: Colors.cyanAccent, fontSize: 18),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              NavLink(label: "Dice Roller", routeName: '/dice'),
+              NavLink(label: "Card Database", routeName: '/cards'),
+              NavLink(label: "Deck Builder", routeName: '/deck'),
+              NavLink(label: "Rules Reference", routeName: '/rules'),
+              NavLink(label: "AI Companion", routeName: '/ai'),
+            ],
           ),
         ),
       ),
