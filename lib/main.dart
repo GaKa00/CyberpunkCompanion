@@ -1,3 +1,4 @@
+import 'package:cptcgc/screens/dicescreen.dart';
 import 'package:cptcgc/widgets/navlink.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        // '/dice': (context) => const DiceScreen(),
+        '/dice': (context) => const DiceScreen(),
         // '/deck': (context) => const DeckBuilder(),
         // '/rules': (context) => const RulesScreen(),
         // '/cards': (context) => const CardDatabase(),
